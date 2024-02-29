@@ -2,6 +2,12 @@
 from twitchio.ext import commands
 from data_operations import load_data, save_data
 
+help_text = (
+    "Adds a user to the list of trusted users. "
+    "Trusted users can add info to certain commands. "
+    "Usage: \"!trust @username\". "
+)
+
 # Import trusted users data
 trusted_users_file_path = 'C:\\Users\\neeee\\Documents\\Python\\goosetavobot\\trusted_users.json'
 global trusted_users_data

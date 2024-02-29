@@ -8,7 +8,13 @@ def fuzzy_search(query, keys, limit=5, threshold=80):
    filtered_matches = [match[0] for match in matches if match[1] >= threshold]
    return filtered_matches
 
-
+help_text = (
+    "Usage: \"!musicsearch <search term>\". " 
+    "Returns up to 10 results for your search term. "
+    "If no search term is provided it will show 10 random suggestions. " 
+    "Also triggered by \"!ms <search term>\" "
+    "Use \"!music list\" for a spreadsheet of available music."
+)
 
 @commands.command(name='musicsearch', aliases=['ms', 'search'])
 async def cmd_musicsearch(ctx, *args):

@@ -2,6 +2,10 @@
 
 from twitchio.ext import commands
 
+help_text = (
+    "A listing of the rules"
+)
+
 @commands.command(name='rules', aliases=['rule'])
 async def cmd_rules(ctx):
     rules_list = [

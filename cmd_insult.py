@@ -3,6 +3,12 @@ import random
 from twitchio.ext import commands
 from data_operations import load_data, save_data
 
+help_text = (
+    "Sends an insult to Neek, or add an @user to insult them instead. "
+    "Usage: \"!insult\" or \"!insult @user\". "
+    "Trusted users can add insults with \"!insult add <info>\". "
+)
+
 @commands.command(name='insult')
 async def cmd_insult(ctx, *args, insults_file_path='C:\\Users\\neeee\\Documents\\Python\\goosetavobot\\insults.json', trusted_users_data=None):
     if trusted_users_data is None:

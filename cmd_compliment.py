@@ -3,6 +3,12 @@ import random
 from twitchio.ext import commands
 from data_operations import load_data, save_data
 
+help_text = (
+    "Sends a compliment to Neek, or add an @user to compliment them instead. " 
+    "Usage: \"!compliment\" or \"!compliment @user\". "
+    "Trusted users can add compliments with \"!compliment add <info>\". "
+)
+
 @commands.command(name='compliment')
 async def cmd_compliment(ctx, *args, compliments_file_path='C:\\Users\\neeee\\Documents\\Python\\goosetavobot\\compliments.json', trusted_users_data=None):
     if trusted_users_data is None:

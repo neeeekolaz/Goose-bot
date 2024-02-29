@@ -7,6 +7,12 @@ from fuzzywuzzy import process
 from twitchio.ext import commands
 from music_paths import script_paths
 
+help_text = (
+    "The !music command will hotswap in-game music. "
+    "Usage: \"!music <selection>\". "
+    "Add \"shuffle\" to the end to make music positions randomized. "
+    "Try !musicsearch (or !ms) to see what is available. "
+)
 
 def fuzzy_search(query, keys, limit=5, threshold=80):
    matches = process.extract(query, keys, limit=limit)

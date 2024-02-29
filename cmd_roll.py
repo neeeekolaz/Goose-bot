@@ -1,6 +1,12 @@
 import random
 from twitchio.ext import commands
 
+help_text = (
+    "Rolls a random number. "
+    "Defaults to a D20 if a number is not provided. "
+    "Usage format: \"!roll\" or \"!roll D<number>\", or \"roll <number>\". "
+)
+
 @commands.command(name='roll')
 async def cmd_roll(ctx, arg: str): 
     # Default to d20 if no value is provided

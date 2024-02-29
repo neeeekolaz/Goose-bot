@@ -3,6 +3,11 @@
 import requests
 from twitchio.ext import commands
 
+help_text = (
+    "Pulls the highest voted entry for a Urban Dictionary entry. "
+    "Usage: !urban <word or phrase>."
+)
+
 async def send_message(ctx, message):
     # Check if the message length exceeds Twitch's limit
     max_length = 500
